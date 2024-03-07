@@ -1,0 +1,160 @@
+* {
+	padding: 0;
+	margin: 0;
+	user-select: none;
+	scroll-behavior: smooth;
+	font-family: sans-serif;
+}
+body {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: black;
+	background-image: url("https://i.pinimg.com/originals/55/e8/92/55e8925d51de3e6c5ce96017530cdb1a.jpg");
+	background-repeat: no-repeat;
+}
+/* main div*/
+.main {
+	background-color: #ffffff2c;
+	backdrop-filter: blur(30px);
+	min-height: 600px;
+	width: 900px;
+	border-radius: 10px;
+	padding: 70px 20px 70px 60px;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+/* two texts */
+.REG-text,.gender-text {
+	font-size: 30px;
+	position: relative;
+    color:white;
+}
+/* gender text */
+.gender-text {
+	margin-top: 30px;
+}
+/* reg text after */
+.REG-text::after {
+	content: "";
+	position: absolute;
+	background-image: linear-gradient(45deg,black 40%, white);
+	width: 50px;
+	height: 5px;
+	bottom: -10px;
+	left: 30%;
+}
+/* gender text after */
+.gender-text::after {
+	content: "";
+	position: absolute;
+	background-image: linear-gradient(45deg,black 40%, white);
+	width: 50px;
+	height: 5px;
+	bottom: -10px;
+	left: 28%;
+}
+/* divs carry inputs */
+.name-div,.email-phone-div,.pass-confirmPass-div {
+	background-color: transparent;
+	height: 60px;
+	width: 95%;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*style for all inputs */
+.inputs-same-css-style {
+	height: 40px;
+	width: 45%;
+	outline: none;
+	border: none;
+	background-color:#000000b2;
+	font-size: 20px;
+	color: white;
+	position: relative;
+    padding:10px;
+    border-radius: 10px;
+}
+/*placeholder for all inputs */
+.inputs-same-css-style::placeholder {
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: capitalize;
+	padding: 10px;
+}
+/*div carry div  gender checkbox  */
+.gender-selection-div {
+	background-color: transparent;
+	height: 60px;
+	width: 95%;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+    
+}
+/* div carry gender checkbox */
+.child-male-div,.child-female-div {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 10px;
+	text-transform: capitalize;
+    color:white;
+}
+/* gender checkbox */
+.female-input,.male-input {
+	height: 20px;
+	aspect-ratio: 1;
+	border: none;
+	outline: none;
+}
+/* button */
+.Registration-btn {
+	height: 45px;
+	width: 95%;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: capitalize;
+	transition: all 0.3s ease;
+	margin-top: 30px;
+}
+/* button  hover*/
+.Registration-btn:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+/* button  active*/
+.Registration-btn:active {
+	height: 40px;
+	width: 88%;
+}
+/*media  responsive*/
+@media (max-width:600px){
+
+    .main {
+        padding: 70px 10px 70px 10px;
+        backdrop-filter: blur(3px);
+    }
+    .name-div,.email-phone-div,.pass-confirmPass-div {
+        background-color: #00000060;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inputs-same-css-style {
+        width: 200px;
+        padding:10px;
+        box-shadow: 2px 2px 15px white;
+    }
+}

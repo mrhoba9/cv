@@ -1,0 +1,227 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:sans-serif;
+    user-select: none;
+}
+body{
+    height:100vh;
+    background-color: black;
+}
+/*nav style starts*/
+header{
+    height:100vh;
+    width:10%;
+    background-color: #252525;
+    position: fixed;
+    z-index: 2;
+}
+.ul-first{
+    height:80vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:18%;
+    background-color: #252525;
+    z-index: 2;
+}
+.ul-first a{
+    width:100%;
+    color:white;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: transparent;
+    text-align: center;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+.Home , .support{
+    text-decoration: line-through;
+}
+.change , .more , .contact{
+    text-decoration: none;
+}
+.ul-first a:hover{
+    opacity:0.6;
+    background-color: #ffffff5e;
+}
+.ul-forth{
+    background-color: transparent;
+    height:30vh;
+    width:140%;
+    display:none;
+    flex-direction:column;
+    background-color: #725400;
+    position: absolute;
+    top:55%;
+    left:110%;
+    padding:20px 0 0 20px;
+    border-radius:25px;
+    z-index: 2;
+}
+.ul-forth::before{
+    content:'';
+    position: absolute;;
+    height:20px;
+    width:20px;
+    transform: rotateZ(45deg);
+    background-color: #725400;
+    top:11%;
+    left:-4%;
+    z-index: -2;
+}
+.ul-forth a{
+    text-decoration: none;
+    color:#0f25a3;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.ul-forth a i {
+    font-size: 30px;
+    margin-top:3%;
+    color:#6e6464;
+    margin-right:10px;
+}
+.ul-forth a:hover{
+    text-decoration: underline;
+}
+/*nav for media starts*/
+.media-new-nav{
+    height:70px;
+    width:70px;
+    background-color: transparent;
+    position:fixed;
+    inset:3% 0 0 5%;
+}
+.media-new-nav i{
+    color:#ffffff;
+    font-size: 30px;
+}
+/*nav for media finishes*/
+/*nav style finishes*/
+
+
+/*nav media starts*/
+@media (max-width:990px) and (min-width:375px){
+    header{
+        width:60%;
+        position: fixed;
+        inset:10% 0 0 3%;
+        display:none;
+        border-radius:30px;
+    }
+    .ul-first{
+        border-radius:30px;
+    }
+    .ul-forth{
+        height:28vh;
+        width:80%;
+        top:60%;
+        left:11%;
+        padding:10px 0 0 15px;
+    }
+    .ul-forth::before{
+        display:none;
+    }
+}
+@media (max-width:374px){
+    header{
+        width:60%;
+        position: fixed;
+        inset:10% 0 0 3%;
+        display:none;
+        border-radius:30px;
+    }
+    .ul-first{
+        border-radius:30px;
+    }
+    .ul-forth{
+        height:28vh;
+        width:80%;
+        top:60%;
+        left:11%;
+        padding:10px 0 0 15px;
+    }
+    .ul-forth::before{
+        display:none;
+    }
+    .ul-forth a{
+        font-size: 18px;
+    }
+}
+/*nav media ends*/
+
+.container{
+    min-height:100vh;
+    width:100%;
+    background-image:url("https://img.freepik.com/free-photo/bathroom-floor-tiles-textured-background_53876-101689.jpg");
+    display:flex;
+}
+.calculator,.XOGame ,.rockPaperScissorsGame{
+    height:200px;
+    width:300px;
+    background-image:linear-gradient(45deg , #4b3100 , #4b0000);
+    margin-top:30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+.rockPaperScissorsGame{
+    margin-left:20%;
+}
+.calculator,.XOGame{
+    margin-left:2%;
+}
+.image{
+    height:120px;
+    width:100%;
+    background-color: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+}
+img{
+    border-radius: 20px;
+}
+h2{
+    font-size: 20px;
+    text-align: center;
+    height:50px;
+    margin-top: 5px;
+}
+.a-link{
+    height:50px;
+    text-align: center;
+    text-decoration: none;
+    color:red;
+    transition: all 0.3s ease;
+    font-size: 17px;
+}
+.a-link:hover{
+    opacity: 0.6;
+    color:blue;
+}
+@media (max-width:1185px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rockPaperScissorsGame,.calculator,.XOGame{
+        margin-left: 0;
+        
+    }
+    .rockPaperScissorsGame{
+        margin-top:35%;
+    }
+    .calculator{
+        margin-bottom: 5%;
+    }
+}

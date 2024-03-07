@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="registration.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Registration page</title>
+</head>
+<body>
+    <section class="main">
+        <h2 class="REG-text">Registration</h2>
+        <div class="name-div">
+            <input type="text" placeholder="Enter your name" class="full-name inputs-same-css-style" onclick="email_input_click()">
+            <input type="text" placeholder="Enter your username" class="username  inputs-same-css-style"onclick="email_input_click()">
+        </div>
+        <div class="email-phone-div">
+            <input type="email" placeholder="Enter your email" class="email-reg  inputs-same-css-style"id="email-reg"onclick="email_input_click()">
+            <input type="tel" placeholder="Enter your phone number" class="phone  inputs-same-css-style"onclick="email_input_click()">
+        </div>
+        <div class="pass-confirmPass-div">
+            <input type="password" placeholder="Enter your password" class="password-reg inputs-same-css-style"onclick="email_input_click()">
+            <input type="password" placeholder="confirm your password" class="confirm-password  inputs-same-css-style"onclick="email_input_click()">
+        </div>
+        <h2 class="gender-text">Gender</h2>
+        <div class="gender-selection-div">
+            <div class="child-male-div">
+                <input type="checkbox" class="male-input">
+                <h2 class="text-male">male</h2>       
+            </div>
+            <div class="child-female-div">
+                <input type="checkbox" class="female-input">
+                <h2 class="text-female">female</h2>
+            </div>
+        </div>
+        <button class="Registration-btn" onclick="Registration_btn_click()">Registration</button>
+    </section>
+    <script src="signIn.js">let cleanedPassword = REG_password.value.replace(/\s/g, "");</script>
+</body>
+</html>
